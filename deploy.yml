@@ -1,6 +1,7 @@
-- name: Install nginx
-  hosts: web
+- name: Install nginx (local test)
+  hosts: localhost
   become: true
+  connection: local
   tasks:
     - name: Update apt cache
       apt:
